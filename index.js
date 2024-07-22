@@ -14,7 +14,7 @@ app.use(user);
 app.use(message);
 app.use(filter);
 
-const port = process.env.port;
+const port = process.env.port || 3090;
 
 DBConnection().then(() => {
   app.listen(port, () => {
