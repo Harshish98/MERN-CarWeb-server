@@ -107,7 +107,7 @@ const ForgotPassword = async (req, res) => {
       from: process.env.MY_EMAIL,
       to: user.email,
       subject: "Reset Password Link",
-      text: `http://localhost:3090/reset-password/${user._id}/${token}`,
+      text: `https://mern-carweb-server.onrender.com/reset-password/${user._id}/${token}`,
     };
 
     transporter.sendMail(mailOptions, function (error, info) {
